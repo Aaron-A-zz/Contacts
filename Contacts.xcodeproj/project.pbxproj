@@ -13,6 +13,7 @@
 		218FD8841ADDDC6E008C2648 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 218FD8831ADDDC6E008C2648 /* Images.xcassets */; };
 		218FD8871ADDDC6E008C2648 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 218FD8851ADDDC6E008C2648 /* LaunchScreen.xib */; };
 		218FD8931ADDDC6E008C2648 /* ContactsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218FD8921ADDDC6E008C2648 /* ContactsTests.swift */; };
+		218FD89D1ADDE476008C2648 /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218FD89C1ADDE476008C2648 /* ContactsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		218FD88C1ADDDC6E008C2648 /* ContactsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContactsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		218FD8911ADDDC6E008C2648 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		218FD8921ADDDC6E008C2648 /* ContactsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTests.swift; sourceTree = "<group>"; };
+		218FD89C1ADDE476008C2648 /* ContactsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				218FD87C1ADDDC6E008C2648 /* AppDelegate.swift */,
 				218FD87E1ADDDC6E008C2648 /* ViewController.swift */,
 				218FD8801ADDDC6E008C2648 /* Main.storyboard */,
+				218FD89C1ADDE476008C2648 /* ContactsTableViewController.swift */,
 				218FD8831ADDDC6E008C2648 /* Images.xcassets */,
 				218FD8851ADDDC6E008C2648 /* LaunchScreen.xib */,
 				218FD87A1ADDDC6E008C2648 /* Supporting Files */,
@@ -214,6 +217,7 @@
 			files = (
 				218FD87F1ADDDC6E008C2648 /* ViewController.swift in Sources */,
 				218FD87D1ADDDC6E008C2648 /* AppDelegate.swift in Sources */,
+				218FD89D1ADDE476008C2648 /* ContactsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
