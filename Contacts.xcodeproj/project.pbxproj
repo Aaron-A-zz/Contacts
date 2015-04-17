@@ -15,6 +15,7 @@
 		218FD8931ADDDC6E008C2648 /* ContactsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218FD8921ADDDC6E008C2648 /* ContactsTests.swift */; };
 		218FD89D1ADDE476008C2648 /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218FD89C1ADDE476008C2648 /* ContactsTableViewController.swift */; };
 		218FD8A31ADE0489008C2648 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218FD8A21ADE0489008C2648 /* Contact.swift */; };
+		218FD8A51AE0722F008C2648 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218FD8A41AE0722F008C2648 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		218FD8921ADDDC6E008C2648 /* ContactsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTests.swift; sourceTree = "<group>"; };
 		218FD89C1ADDE476008C2648 /* ContactsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
 		218FD8A21ADE0489008C2648 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		218FD8A41AE0722F008C2648 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				218FD87C1ADDDC6E008C2648 /* AppDelegate.swift */,
 				218FD87E1ADDDC6E008C2648 /* ViewController.swift */,
 				218FD8801ADDDC6E008C2648 /* Main.storyboard */,
+				218FD8A41AE0722F008C2648 /* DetailViewController.swift */,
 				218FD89C1ADDE476008C2648 /* ContactsTableViewController.swift */,
 				218FD8A21ADE0489008C2648 /* Contact.swift */,
 				218FD8831ADDDC6E008C2648 /* Images.xcassets */,
@@ -220,6 +223,7 @@
 			files = (
 				218FD8A31ADE0489008C2648 /* Contact.swift in Sources */,
 				218FD87F1ADDDC6E008C2648 /* ViewController.swift in Sources */,
+				218FD8A51AE0722F008C2648 /* DetailViewController.swift in Sources */,
 				218FD87D1ADDDC6E008C2648 /* AppDelegate.swift in Sources */,
 				218FD89D1ADDE476008C2648 /* ContactsTableViewController.swift in Sources */,
 			);
@@ -419,6 +423,7 @@
 				218FD8981ADDDC6E008C2648 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		218FD8991ADDDC6E008C2648 /* Build configuration list for PBXNativeTarget "ContactsTests" */ = {
 			isa = XCConfigurationList;
@@ -427,6 +432,7 @@
 				218FD89B1ADDDC6E008C2648 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

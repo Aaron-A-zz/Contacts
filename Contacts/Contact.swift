@@ -13,8 +13,11 @@ class Contact {
     var name: String?
     var phoneNumber: String?
     
-    init(name:String? = nil, phoneNumber:String? = nil) {
+    init(name:String?, phoneNumber:String?) {
         self.name = name
         self.phoneNumber = phoneNumber
     }
 }
+
+
+
