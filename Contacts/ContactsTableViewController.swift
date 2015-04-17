@@ -14,18 +14,21 @@ class ContactsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        let moveButton = UIBarButtonItem(barButtonSystemItem: .Edit, target: self, action: Selector("toggleEdit"))
+        self.navigationItem.leftBarButtonItem = moveButton
+        
+        let longpress = UILongPressGestureRecognizer(target: self, action: "longPressGestureRecognized:")
+        
+        tableView.addGestureRecognizer(longpress)
+        
         let mike = Contact(name: "Mike", phoneNumber: "###-###-####")
         let mindy = Contact(name: "Mindy", phoneNumber: "###-###-###")
         
         self.contacts.append(mike)
         self.contacts.append(mindy)
         
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
@@ -71,6 +74,44 @@ class ContactsTableViewController: UITableViewController {
         var destination = segue.destinationViewController as! DetailViewController
         destination.contact = contact
 
+    }
+    
+    //This allows the table to be edited
+    override func  tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+    
+        return true
+    }
+    
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            self.contacts.removeAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        }
+    }
+    
+    func toggleEdit() {
+        self.tableView.setEditing(!self.tableView.editing, animated: true)
+        //Change the Edit Name to Done
+        let moveButton = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: Selector("toggleEdit"))
+        self.navigationItem.leftBarButtonItem = moveButton
+    }
+    
+    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
+        let contactMoving = self.contacts.removeAtIndex(fromIndexPath.row)
+        self.contacts.insert(contactMoving, atIndex: toIndexPath.row)
+    }
+    
+    //Adding Editing Style to remove delete buttons
+    override func tableView(tableView: UITableView, editingStyleForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCellEditingStyle {
+        if tableView.editing {
+            return .None
+        } else {
+            return .Delete
+        }
+    }
+    
+    override func tableView(tableView: UITableView, shouldIndentWhileEditingRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return false
     }
 
 }
